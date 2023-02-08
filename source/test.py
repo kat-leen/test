@@ -39,3 +39,15 @@ def save_pickle(obj: Any, path: Union[Path, str], filename: str) -> None:
 
     with open(Path(path) / f"{get_date()}_{filename}.pkl", "wb") as file:
         pickle.dump(obj, file, pickle.HIGHEST_PROTOCOL)
+
+
+def hinge_loss(score: float, threshold: float) -> float:
+    """
+    Compute the hinge loss. Return 0 if the score is below the given threshold.
+
+    :param score: the loss score
+    :param threshold: the threshold to consider the loss score null if below
+    :return: the hinge loss
+    """
+
+    return max(0.0, score - threshold)

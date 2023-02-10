@@ -1,7 +1,7 @@
 source module
 =============
 
-.. automodule:: source.test
+.. automodule:: source.func
    :members:
    :undoc-members:
    :show-inheritance:

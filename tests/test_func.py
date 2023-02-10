@@ -1,4 +1,4 @@
-from source import test  # local packages
+from source import func  # local packages
 
 
 def test_get_date() -> None:
@@ -8,7 +8,7 @@ def test_get_date() -> None:
     :return: None
     """
 
-    date = test.get_date()
+    date = func.get_date()
     date_split = date.split("-")
 
     assert len(date) == 10
